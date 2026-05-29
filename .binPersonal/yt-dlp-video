@@ -1,0 +1,5 @@
+#!/bin/bash
+
+
+yt-dlp -f 'bestaudio[ext=m4a]+bestvideo[ext=mp4]' --write-thumbnail --embed-thumbnail "$@"
+rm -f ~/Downloads/*.webp

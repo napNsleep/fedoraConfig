@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "
+===================
+=== DNF UPGRADE ===
+===================
+"
+sudo dnf upgrade --refresh -y
+echo "
+======================
+=== FLATPAK UPDATE ===
+======================
+"
+flatpak update -y
+

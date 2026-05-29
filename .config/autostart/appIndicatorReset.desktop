@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Reset AppIndicator
+Exec=/home/$USER/.binPersonal/appIndicatorReset
+Terminal=false
+Type=Application
+Icon=kitty
+Categories=Network;Utilities;

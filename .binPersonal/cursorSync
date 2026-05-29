@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo sed -i "s|cursor-theme='.*'|cursor-theme='Bibata-Original-Classic'|" /etc/dconf/db/gdm.d/95-gdm-settings
+sudo dconf update
+

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sleep 2
+
+gnome-extensions disable appindicatorsupport@rgcjonas.gmail.com
+gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com

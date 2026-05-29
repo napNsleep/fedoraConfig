@@ -1,0 +1,22 @@
+cursor_shape beam
+cursor_blink yes
+
+
+
+# BEGIN_KITTY_THEME
+# Tokyo Night
+include current-theme.conf
+# END_KITTY_THEME
+
+# BEGIN_KITTY_FONTS
+font_family      family="Hurmit Nerd Font Mono"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS
+
+# KEYBOARD SHORTCUTS
+map ctrl+shift+c signal_child SIGINT
+map ctrl+c copy_to_clipboard
+map ctrl+v paste_from_clipboard
+

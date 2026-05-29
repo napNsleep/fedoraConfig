@@ -1,0 +1,9 @@
+#!/bin/bash
+
+STATUS=$(bluetoothctl info DC:CD:18:AA:7D:E4 | grep -e "Connected" | awk -F': ' '{print $2}')
+
+if [[ "$STATUS" == "yes" ]]; then
+    bluetoothctl disconnect DC:CD:18:AA:7D:E4
+else
+    bluetoothctl connect DC:CD:18:AA:7D:E4
+fi

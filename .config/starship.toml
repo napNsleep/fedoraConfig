@@ -1,0 +1,53 @@
+format = """
+[ ](color_orange)\
+$shell\
+[](bg:color_yellow fg:color_orange)\
+$username$hostname\
+[](bg:color_green fg:color_yellow)\
+$directory\
+[](bg:color_blue fg:color_green)\
+$python\
+[](color_blue)\
+\n    $character"""
+
+palette = 'gruvbox_dark'
+
+[palettes.gruvbox_dark]
+color_fg0 = '#fbf1c7'
+color_blue = '#458588'
+color_aqua = '#689d6a'
+color_green = '#98971a'
+color_orange = '#d65d0e'
+color_red = '#cc241d'
+color_yellow = '#d79921'
+
+[shell]
+disabled = false
+bash_indicator = "bsh "
+style = "bg:color_orange fg:color_fg0"
+format = '[$indicator ]($style)'
+
+[username]
+show_always = true
+style_user = "bg:color_yellow fg:color_fg0"
+format = '[ $user]($style)'
+
+[hostname]
+ssh_only = false
+style = "bg:color_yellow fg:color_fg0"
+format = '[@$hostname ]($style)'
+
+[directory]
+style = "bg:color_green fg:color_fg0"
+format = "[ $path ](bold $style)"
+
+[python]
+disabled = false
+style = "bg:color_blue fg:color_fg0"
+format = '[ (${version} )(\($virtualenv\) )]($style)'
+
+[character]
+disabled = false
+success_symbol = '[~❯](bold fg:color_green)'
+error_symbol = '[~❯](bold fg:color_red)'
+

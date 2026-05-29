@@ -1,0 +1,59 @@
+#vertical-spacer {
+  display: none !important;
+}
+
+/* Title bar */
+.titlebar-spacer {
+    display: none !important;
+} 
+
+/* Tab bar */
+#navigator-toolbox {
+    border: 0px !important;
+}
+
+#TabsToolbar {
+    margin-left: 50vw !important;
+}
+
+/* Nav bar*/
+#nav-bar {
+    background: transparent !important;
+    margin-right: 50vw !important;
+    margin-top: -36px !important;
+}
+
+/* URL bar */
+#forward-button {
+    display: none !important;
+}
+
+#tracking-protection-icon-container {
+    display: none !important;
+}
+
+#urlbar-container {
+    width: auto !important;
+}
+
+#urlbar {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* #urlbar[breakout-extend] {
+    width: 100vw !important;
+} */
+
+/* #page-action-buttons {
+    display: none !important;
+} */
+
+#PanelUI-button {
+    display: none !important;
+}
+
+#unified-extensions-button {
+  display: none !important;
+  }

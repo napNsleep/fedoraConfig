@@ -1,0 +1,20 @@
+#!/bin/bash
+
+PORT="53317/tcp"
+ZONE="drop"
+
+CURRENT=$(sudo firewall-cmd --zone=$ZONE --list-ports | grep -w "$PORT")
+
+if [[ -z "$CURRENT" ]]; then
+    echo "Port $PORT is CLOSED -- opening it..."
+    sudo firewall-cmd --zone=$ZONE --add-port=$PORT
+    echo "Port $PORT OPENED"
+else
+    echo "Port $PORT is OPEN -- closing it..."
+    sudo firewall-cmd --zone=$ZONE --remove-port=$PORT
+    echo "Port $PORT CLOSED"
+fi
+
+echo
+echo "Current $ZONE zone status:"
+sudo firewall-cmd --zone=$ZONE --list-all
