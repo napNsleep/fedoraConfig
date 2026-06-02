@@ -6,8 +6,8 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
-    PATH="$HOME/.binPersonal:$HOME/.local/bin:$HOME/bin:$PATH"
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/.bin:" ]]; then
+    PATH="$HOME/.local/bin:$HOME/.bin:$PATH"
 fi
 export PATH
 
@@ -41,10 +41,12 @@ alias cspotify="rm -rf ~/.var/app/com.spotify.Client"
 alias set-theme="gsettings set org.gnome.desktop.interface gtk-theme "$@""
 alias cat="bat"
 alias sobash="source ~/.bashrc"
+alias svim="sudoedit"
 
 #############################
 ##Default EDITOR and VISUAL##
 #############################
+export SUDO_EDITOR=nvim
 export EDITOR=nvim
 export VISUAL=nvim
 

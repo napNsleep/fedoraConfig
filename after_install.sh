@@ -27,6 +27,13 @@ packages=(
     malcontent-control 
     gnome-tour 
     gnome-calendar 
+    gnome-shell-extension-common
+    gnome-shell-extension-background-logo
 )
 
-sudo dnf remove "${packages[@]}"
+sudo dnf remove "${packages[@]}" -y
+
+sleep 5
+
+# restart
+sudo systemctl reboot
