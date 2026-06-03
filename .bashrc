@@ -53,7 +53,7 @@ export VISUAL=nvim
 ################
 ##git commands##
 ################
-alias gadd="git add ."
+alias gadd="git add"
 alias gcommit="git commit -m"
 alias gstat="git status"
 alias greset="git reset"
