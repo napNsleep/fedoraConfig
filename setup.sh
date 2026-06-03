@@ -16,6 +16,7 @@ DNF_PACKAGES=(
 	gnome-tweaks 
 	gnome-shell-extension-forge
 	gnome-shell-extension-appindicator
+	dconf-editor
 )
 
 FLATPAK_PACKAGES=(
