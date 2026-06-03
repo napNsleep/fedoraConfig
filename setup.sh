@@ -43,10 +43,10 @@ sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
 
 # install personal apps
 sudo dnf install "${DNF_PACKAGES[@]}" --skip-broken --skip-unavailable -y
-flatpak install "${FLATPAK_PACKAGES[@]}"-y
+flatpak install "${FLATPAK_PACKAGES[@]}" -y
 
 # copy files in right directories
 cp ./.bashrc $HOME
 cp -r ./.bin $HOME
 cp -r ./firefox/chrome "$FF_CONF"
-cp -r ./.config $HOME/.config
+cp -r ./.config/* $HOME/.config

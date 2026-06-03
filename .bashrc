@@ -50,6 +50,17 @@ export SUDO_EDITOR=nvim
 export EDITOR=nvim
 export VISUAL=nvim
 
+################
+##git commands##
+################
+alias gadd="git add ."
+alias gcommit="git commit -m"
+alias gstat="git status"
+alias greset="git reset"
+alias gundocomm="git reset --soft HEAD~1"
+alias gpush="git push -u origin main"
+
+
 ############
 ##starship##
 ############
