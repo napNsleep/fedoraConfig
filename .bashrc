@@ -42,6 +42,7 @@ alias set-theme="gsettings set org.gnome.desktop.interface gtk-theme "$@""
 alias cat="bat"
 alias sobash="source ~/.bashrc"
 alias svim="sudoedit"
+alias ll="ls -lah"
 
 #############################
 ##Default EDITOR and VISUAL##
