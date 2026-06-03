@@ -14,6 +14,11 @@ set_keys() {
 }
 
 
+gsettings set org.gnome.settings-daemon.plugins.media-keys control-center "['<Super>Return']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys mic-mute "['F12']"
+gsettings set org.gnome.shell.keybindings toggle-message-tray "['']"
+gsettings set org.gnome.shell.keybindings toggle-quick-settings "['']"
+gsettings set org.gnome.desktop.wm.keybindings switch-group "['']"
 
 set_keys custom0 "Open Firefox" "firefox" "<Super>w"
 set_keys custom1 "Open Kitty" "kitty" "<Super>grave>"
