@@ -9,11 +9,6 @@ fi
 # maximize dnf dl speed
 echo -e 'max_parallel_downloads=20\ndefaultyes=true' | tee -a /etc/dnf/dnf.conf > /dev/null
 
-# firewall config
-firewall-cmd --set-default-zone=drop > /dev/null
-firewall-cmd --permanent --zone=drop --add-service=ssh \--add-service=dhcpv6-client > /dev/null
-firewall-cmd --reload > /dev/null
-
 # adding repos
 dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 dnf copr enable @neurofedora/neurofedora-extra -y
@@ -67,6 +62,11 @@ DNF_PACKAGES=(
 dnf swap ffmpeg-free ffmpeg --allowerasing -y
 dnf remove "${BLOAT[@]}" -y
 dnf install "${DNF_PACKAGES[@]}" --skip-broken --skip-unavailable -y
+
+# firewall config
+firewall-cmd --set-default-zone=drop > /dev/null
+firewall-cmd --permanent --zone=drop --add-service=ssh \--add-service=dhcpv6-client > /dev/null
+firewall-cmd --reload > /dev/null
 
 # disable wait for network start before boot
 systemctl disable systemd-networkd-wait-online.service
