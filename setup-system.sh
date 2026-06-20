@@ -72,7 +72,7 @@ firewall-cmd --reload > /dev/null
 systemctl disable systemd-networkd-wait-online.service
 
 echo "
-Finished!!! 
+FINISHED! 
 Please restart PC"
 
 
