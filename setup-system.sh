@@ -71,9 +71,8 @@ firewall-cmd --reload > /dev/null
 # disable wait for network start before boot
 systemctl disable systemd-networkd-wait-online.service
 
-sleep 5
-
-# restart
-systemctl reboot
+echo "
+Finished!!! 
+Please restart PC"
 
 
