@@ -10,9 +10,9 @@ fi
 echo -e 'max_parallel_downloads=20\ndefaultyes=true' | tee -a /etc/dnf/dnf.conf > /dev/null
 
 # firewall config
-firewall-cmd --set-default-zone=drop
-firewall-cmd --permanent --zone=drop --add-service=ssh \--add-service=dhcpv6-client
-firewall-cmd --reload
+firewall-cmd --set-default-zone=drop > /dev/null
+firewall-cmd --permanent --zone=drop --add-service=ssh \--add-service=dhcpv6-client > /dev/null
+firewall-cmd --reload > /dev/null
 
 # adding repos
 dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
