@@ -23,6 +23,11 @@ cp -r ./.bin $HOME
 cp -r ./firefox/chrome "$FF_CONF"
 cp -r ./.config/* $HOME/.config
 
+# reload bashrc
+source ~/.bashrc
+
+sleep 3
+
 # set keyboard shortcuts
 set_keys() {
 	local slot="$1"
@@ -45,7 +50,7 @@ gsettings set org.gnome.shell.keybindings toggle-quick-settings "['']"
 gsettings set org.gnome.desktop.wm.keybindings switch-group "['']"
 
 set_keys custom0 "Open Firefox" "firefox" "<Super>w"
-set_keys custom1 "Open Kitty" "kitty" "<Super>grave>"
+set_keys custom1 "Open Kitty" "kitty" "<Super>grave"
 set_keys custom2 "Open Files" "nautilus" "<Super>f"
 set_keys custom3 "Open Discord" "flatpak run com.discordapp.Discord" "<Super>d"
 set_keys custom4 "Toggle Mullvad" "toggleMullvad" "<Control><Alt>v"
@@ -61,4 +66,6 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings \
 '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/',
 '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/']"
 
+sleep 3
 
+echo "Finished!!!"
