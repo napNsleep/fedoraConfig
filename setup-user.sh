@@ -1,5 +1,29 @@
 #!/bin/bash
 
+FF_CONF="$HOME/.config/mozilla/firefox/*.default-release"
+
+FLATPAK_PACKAGES=(
+	flathub com.mattjakeman.ExtensionManager 
+	com.discordapp.Discord 
+	org.localsend.localsend_app	
+)
+
+# initialize firefox profile
+timeout 5s firefox --headless
+
+# add flathub repo
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+# install flatpak apps
+flatpak install "${FLATPAK_PACKAGES[@]}" -y
+
+# copy files in right directories
+cp ./.bashrc $HOME
+cp -r ./.bin $HOME
+cp -r ./firefox/chrome "$FF_CONF"
+cp -r ./.config/* $HOME/.config
+
+# set keyboard shortcuts
 set_keys() {
 	local slot="$1"
 	local name="$2"
