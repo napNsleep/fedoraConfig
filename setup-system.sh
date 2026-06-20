@@ -15,8 +15,8 @@ firewall-cmd --permanent --zone=drop --add-service=ssh \--add-service=dhcpv6-cli
 firewall-cmd --reload
 
 # adding repos
-dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-dnf copr enable @neurofedora/neurofedora-extra 
+dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
+dnf copr enable @neurofedora/neurofedora-extra -y
 dnf copr enable atim/starship
 dnf config-manager addrepo --from-repofile=https://repository.mullvad.net/rpm/stable/mullvad.repo
 
