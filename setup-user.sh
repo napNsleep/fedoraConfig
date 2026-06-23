@@ -45,6 +45,7 @@ set_keys() {
 
 gsettings set org.gnome.settings-daemon.plugins.media-keys control-center "['<Super>Return']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys mic-mute "['F12']"
+gsettings set org.gnome.shell.keybindings show-screenshot-ui "['<Shift><Super>s']"
 gsettings set org.gnome.shell.keybindings toggle-message-tray "['']"
 gsettings set org.gnome.shell.keybindings toggle-quick-settings "['']"
 gsettings set org.gnome.desktop.wm.keybindings switch-group "['']"
