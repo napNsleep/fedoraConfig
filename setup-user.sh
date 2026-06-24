@@ -3,7 +3,7 @@
 FF_CONF="$HOME/.config/mozilla/firefox/*.default-release"
 
 FLATPAK_PACKAGES=(
-	flathub com.mattjakeman.ExtensionManager 
+	com.mattjakeman.ExtensionManager 
 	com.discordapp.Discord 
 	org.localsend.localsend_app	
 )
@@ -15,7 +15,7 @@ timeout 5s firefox --headless
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # install flatpak apps
-flatpak install "${FLATPAK_PACKAGES[@]}" -y
+flatpak install flathub "${FLATPAK_PACKAGES[@]}" -y
 
 # copy files in right directories
 cp ./.bashrc $HOME
