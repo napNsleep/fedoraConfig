@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FF_CONF=$HOME/.config/mozilla/firefox/*.default-release
+FF_CONF=$HOME/.config/mozilla/firefox/*.default-release/chrome
 
 FLATPAK_PACKAGES=(
 	com.mattjakeman.ExtensionManager 
