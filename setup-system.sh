@@ -57,6 +57,7 @@ DNF_PACKAGES=(
 	gnome-shell-extension-forge
 	gnome-shell-extension-appindicator
 	dconf-editor
+	nautilus-python
 )
 
 dnf swap ffmpeg-free ffmpeg --allowerasing -y
