@@ -62,7 +62,7 @@ DNF_PACKAGES=(
 
 dnf swap ffmpeg-free ffmpeg --allowerasing -y
 dnf remove "${BLOAT[@]}" -y
-dnf install "${DNF_PACKAGES[@]}" --skip-broken --skip-unavailable -y
+dnf install "${DNF_PACKAGES[@]}" --exclude=gnome-extensions-app --skip-broken --skip-unavailable -y
 
 # firewall config
 firewall-cmd --set-default-zone=drop > /dev/null
