@@ -1,0 +1,7 @@
+browser.uidensity = 1
+toolkit.legacyUserProfileCustomizations.stylesheets = true
+
+extensions
+- uBlock origin (add "google.com##.hdzaWe" custom filter)
+- SponsorBlock for Youtube - Skip Sponsorships
+
